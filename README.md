@@ -3,7 +3,7 @@
 </p>
 <h2 align="center">PrivacyBreacher</h2>
 
-PrivacyBreacher is an Android app built as a proof of concept for a research article describing the privacy issues in Android. This app can access following information from your phone *without requesting any permissions*:
+PrivacyBreacher is an Android app built as a proof of concept for a research article describing the privacy issues in Android. This app can access the following information from your phone *without requesting any permissions*:
 
  1. **Screen state of your phone (i.e., when your phone screen goes off/on)**
  2.  **Monitor when you plug-in and remove your phone charger and wired headphones.**
@@ -17,7 +17,7 @@ This app supports Android Pie (Android 9, API 28) or later versions.
 
 ## Research Article
 
-To get more information on how this app can access all that data, check out our article here!
+To get more information on how this app can access all that data, check out our article [here](https://github.com/databurn-in/Android-Privacy-Issues)!
 
 ## Screenshots
 
@@ -26,7 +26,9 @@ To get more information on how this app can access all that data, check out our 
 
 ## Download
 
-Links will be provided soon!
+[Github release](https://github.com/databurn-in/PrivacyBreacher/releases)
+
+Play Store (will be provided soon)
 
 ## Contribute
 
