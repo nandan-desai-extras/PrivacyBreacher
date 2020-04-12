@@ -4,8 +4,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.hardware.display.DisplayManager;
 import android.os.BatteryManager;
 import android.util.Log;
+import android.view.Display;
 import android.widget.Toast;
 
 
@@ -25,13 +27,27 @@ public class EventReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
         if (Intent.ACTION_SCREEN_ON.equals(action)) {
-            Log.i(TAG, "onReceive: Screen is active.");
-            eventList.add("\uD83D\uDD06 Phone screen turned ON at " + getFormattedDate(System.currentTimeMillis()));
-            PrivacyBreacherService.eventDatabase.setValue(eventList);
+            Log.i(TAG, "onReceive: Screen is interactive.");
+            DisplayManager displayManager = (DisplayManager) context.getSystemService(Context.DISPLAY_SERVICE);
+            Display display= null;
+            if (displayManager != null) {
+                display = displayManager.getDisplay(Display.DEFAULT_DISPLAY);
+            }
+            if(display!=null && display.getState()==Display.STATE_ON) {
+                eventList.add("\uD83D\uDD06 Phone screen turned ON at " + getFormattedDate(System.currentTimeMillis()));
+                PrivacyBreacherService.eventDatabase.setValue(eventList);
+            }
         } else if (Intent.ACTION_SCREEN_OFF.equals(action)) {
-            Log.i(TAG, "onReceive: Screen is inactive.");
-            eventList.add("\uD83D\uDD05 Phone screen turned OFF at " + getFormattedDate(System.currentTimeMillis()));
-            PrivacyBreacherService.eventDatabase.setValue(eventList);
+            Log.i(TAG, "onReceive: Screen is non-interactive.");
+            DisplayManager displayManager = (DisplayManager) context.getSystemService(Context.DISPLAY_SERVICE);
+            Display display= null;
+            if (displayManager != null) {
+                display = displayManager.getDisplay(Display.DEFAULT_DISPLAY);
+            }
+            if(display!=null && display.getState()==Display.STATE_OFF) {
+                eventList.add("\uD83D\uDD05 Phone screen turned OFF at " + getFormattedDate(System.currentTimeMillis()));
+                PrivacyBreacherService.eventDatabase.setValue(eventList);
+            }
         } else if (Intent.ACTION_SHUTDOWN.equals(action)) {
             Toast.makeText(context, "PrivacyBreacher just saw that you are switching OFF your phone!", Toast.LENGTH_LONG).show();
         } else if (Intent.ACTION_POWER_CONNECTED.equals(action)) {
