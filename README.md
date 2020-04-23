@@ -1,3 +1,4 @@
+
 <p align="center">
   <img height="200" src="https://raw.githubusercontent.com/NandanDesai/res/master/privacy_breacher.png"> 
 </p>
@@ -13,7 +14,9 @@ PrivacyBreacher is an Android app built as a proof of concept for a research art
  6. **Get a list of all the apps installed on your phone.**
  7. **Construct a 3D visualization of your body movements.**
 
-This app supports Android Pie (Android 9, API 28) or later versions.
+This app supports Android Pie (Android 9, API 28) or later versions. 
+
+Edit: Some issues mentioned here might have been fixed in Android R, API 30 (the latest version of Android). Check out [this issue](https://github.com/databurn-in/Android-Privacy-Issues/issues/1) for more. We'll release an update for that soon. Currently, the privacy issues mentioned here are valid till Android Q (API 29).
 
 ## Research Article
 
