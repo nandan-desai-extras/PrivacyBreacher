@@ -19,7 +19,7 @@ public class PrivacyBreacherService extends Service {
 
     private static final String TAG = "PrivacyBreacherService";
 
-    public static MutableLiveData<ArrayList<String>> eventDatabase = new MutableLiveData<>();
+    public static MutableLiveData<ArrayList<String>> eventDatabase;
 
     private EventReceiver eventReceiver;
 
@@ -33,6 +33,7 @@ public class PrivacyBreacherService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        eventDatabase = new MutableLiveData<>();
         startForeground(R.string.app_name, getNotification(this));
 
         IntentFilter intentFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
