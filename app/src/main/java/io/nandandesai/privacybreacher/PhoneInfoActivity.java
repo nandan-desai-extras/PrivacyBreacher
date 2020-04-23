@@ -13,13 +13,13 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -38,7 +38,9 @@ public class PhoneInfoActivity extends AppCompatActivity {
     }
 
     private static String getFormattedDataMeasure(long bytes) {
-        DecimalFormat decimalFormat = new DecimalFormat("#.#");
+        Locale locale  = new Locale("en", "UK");
+        DecimalFormat decimalFormat = (DecimalFormat) NumberFormat.getNumberInstance(locale);
+        decimalFormat.applyPattern("#.#");
         String dataFormat = bytes + " B";
         float speed = 0;
         if (bytes >= 1024) {
