@@ -31,7 +31,7 @@ To get more information on how this app can access all that data, check out our 
 
 [Github release](https://github.com/databurn-in/PrivacyBreacher/releases)
 
-Play Store (will be provided soon)
+[Play Store](https://play.google.com/store/apps/details?id=io.nandandesai.privacybreacher)
 
 ## Contribute
 
@@ -41,7 +41,7 @@ We accept pull requests for this app. If you find any bugs or want to add new fe
 
 MIT License
 
-Copyright 2020 DataBurn
+Copyright 2020 DataBurn.in
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
