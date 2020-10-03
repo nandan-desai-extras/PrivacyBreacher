@@ -33,6 +33,8 @@ To get more information on how this app can access all that data, check out our 
 
 [Play Store](https://play.google.com/store/apps/details?id=io.nandandesai.privacybreacher)
 
+[IzzyOnDroid](https://apt.izzysoft.de/fdroid/index/apk/io.nandandesai.privacybreacher)
+
 ## Contribute
 
 We accept pull requests for this app. If you find any bugs or want to add new features or just want to improve the code structure, then pull requests are most welcome!
