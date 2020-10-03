@@ -1,0 +1,8 @@
+<p><i>PrivacyBreacher</i> is an Android app built as a proof of concept for a research article describing the privacy issues in Android. This app can access the following information from your phone <i>without requesting any permissions:</i></p><ul>
+<li>Figure out at what time your phone screen turned on/off.</li>
+<li>Figure out at what time you plugged in or removed your phone charger and wired headphones.</li>
+<li>Figure out at what time you switched on/off your phone (i.e., it captures the device uptime and ACTION_SHUTDOWN broadcasts).</li>
+<li>Access most of your device related information like your phone model, manufacturer etc.</li>
+<li>Keep track of your WiFi/Mobile data usage.</li>
+<li>Get a list of all the apps installed on your phone.</li>
+<li>Construct a 3D visualization of your body movements.</li></ul>
