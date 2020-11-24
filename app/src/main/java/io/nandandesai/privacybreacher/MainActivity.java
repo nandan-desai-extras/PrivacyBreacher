@@ -6,13 +6,18 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
+import android.widget.Switch;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -66,6 +71,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        //service switch
+        Switch serviceSwitch = findViewById(R.id.serviceSwitch);
+        serviceSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                Log.i(TAG, "onCheckedChanged: isChecked: "+isChecked);
+                if(isChecked){
+                    Log.i(TAG, "onCheckedChanged: start foreground and stop background service");
+                    Toast.makeText(getApplicationContext(), "Starting Foreground Service", Toast.LENGTH_LONG).show();
+                }else{
+                    Log.i(TAG, "onCheckedChanged: start background and stop foreground service");
+                    Toast.makeText(getApplicationContext(), "Starting Background Service", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
 
     public void showPopup(View v) {
