@@ -33,8 +33,6 @@ To get more information on how this app can access all that data, check out our 
 
 [Play Store](https://play.google.com/store/apps/details?id=io.nandandesai.privacybreacher)
 
-[IzzyOnDroid](https://apt.izzysoft.de/fdroid/index/apk/io.nandandesai.privacybreacher)
-
 [F-Droid](https://f-droid.org/en/packages/io.nandandesai.privacybreacher/)
 
 ## Contribute
